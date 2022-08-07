@@ -1,7 +1,7 @@
 import React, {createContext} from 'react'
 import '../styles/App.css';
 import { UserProfile } from './UserProfile';
-export const contextData = createContext();
+const UserContext = createContext();
 
 
 
@@ -9,9 +9,9 @@ const App = () => {
 
   return (
     <div id="main">
-      <contextData.Provider value={{name:"Newton",age:3}}>
+      <UserContext.Provider value={{name:"Newton",age:3}}>
         <UserProfile />
-      </contextData.Provider>
+      </UserContext.Provider>
       
     </div>
   )
